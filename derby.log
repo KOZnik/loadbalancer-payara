@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Dec 21 15:11:12 CET 2015:
+ Uruchamianie wersji The Apache Software Foundation - Apache Derby - 10.10.2.0 - (1582446) systemu Derby: instancja a816c00e-0151-c4e1-3675-00000a6d8908
+w katalogu bazy danych C:\Users\Comarch\AppData\Local\Temp\gfembed9192351574051140962tmp\lib\databases\embedded_default sun.misc.Launcher$AppClassLoader@677327b6 
+
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_45-b15
+user.dir=C:\workspace\LoadBalancerPayara
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Uruchomiono program ³aduj¹cy klasê bazy danych - derby.database.classpath=''
