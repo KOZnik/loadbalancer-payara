@@ -24,17 +24,10 @@ public enum GroupsConfiguration {
         final String name;
         final int weight;
 
-        public Group(final Config params) {
+        Group(final Config params) {
             name = params.getString("name");
             weight = params.getInt("weight");
         }
 
-        public String getName() {
-            return name;
-        }
-
-        public int getWeight() {
-            return weight;
-        }
     }
 }

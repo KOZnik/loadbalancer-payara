@@ -1,25 +1,21 @@
 package pl.loadbalancer.control;
 
-import javax.inject.Inject;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.IntStream;
 
 public class Balancer {
 
+    private final List<String> groups = new ArrayList<>();
+
     public Balancer() {
+        GroupsConfiguration.INSTANCE.getGroups().forEach(g ->
+                IntStream.range(0, g.weight).forEach((i) -> groups.add(g.name)));
         System.out.println("Balancer: created");
     }
 
-    @Inject
-    private UserRepository repository;
-
-    @Inject
-    private ListBalancingStrategy strategy;
-
     public String routeUser(String clientId) {
-        return repository.userGroup(clientId).orElseGet(() -> {
-            String calculated = strategy.calculateNextFreeGroup();
-            repository.assignUserToGroup(clientId, calculated);
-            return calculated;
-        });
+        return groups.get(Math.abs(clientId.hashCode() % 10));
     }
 
 }

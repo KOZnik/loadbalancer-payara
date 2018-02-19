@@ -10,8 +10,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-@Path("/route")
 @Stateless
+@Path("/route")
 public class BalancerResource {
 
     @PostConstruct
